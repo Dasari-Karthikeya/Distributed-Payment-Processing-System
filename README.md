@@ -52,7 +52,7 @@ graph TD
     ReconJob -.reads.-> LedgerDB
 ```
 
-### Service responsibilities
+### Services responsibilities
 
 - **API Gateway** — single entry point, terminates TLS, authenticates merchant API keys, applies per-merchant rate limits, routes to downstream services. Built on Spring Cloud Gateway.
 - **Payment Service** — owns the `PaymentIntent` lifecycle (`requires_confirmation → processing → succeeded/failed`). Validates idempotency keys, persists state transitions, and writes events to an outbox table that a relay process publishes to Kafka.
@@ -93,7 +93,7 @@ sequenceDiagram
     W->>M: POST webhook (X-Signature header)
 ```
 
-### Repository layout
+### Repository layouts
 
 ```
 distributed-payment-processing-system/
