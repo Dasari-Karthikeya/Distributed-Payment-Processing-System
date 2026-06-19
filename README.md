@@ -1,4 +1,4 @@
-# Distributed Payment Processing System
+# Distributed Payment Processing Systems
 
 A Java/Spring Boot microservices system that models how a payment processor like Stripe handles payment intents, ledger entries, and webhook delivery — built to understand the hard parts of distributed transaction processing, not to compete with an actual payment provider.
 
